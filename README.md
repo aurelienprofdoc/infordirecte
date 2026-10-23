@@ -1,2 +1,0 @@
-# infordirecte
-Infodirecte
