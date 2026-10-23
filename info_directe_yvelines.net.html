@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Version destinée à une activité d’éducation aux médias : contenus à vérifier et recouper par les élèves. -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Info directe des Yvelines — Maquette fictive</title>
+<style>
+  :root { --navy:#12314a; --blue:#176b87; --red:#c83c3c; --paper:#f4f6f8; --ink:#202a33; --muted:#687784; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial, Helvetica, sans-serif; line-height:1.55; }
+  .fiction-banner { background:#fff0c2; color:#634600; text-align:center; padding:9px 16px; font-size:.82rem; font-weight:700; border-bottom:1px solid #e3c66d; }
+  header { background:white; border-bottom:4px solid var(--red); }
+  .topline { background:var(--navy); color:#e9f1f5; font-size:.78rem; padding:7px max(18px, calc((100% - 1100px)/2)); }
+  .masthead { max-width:1100px; margin:auto; padding:24px 20px 18px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+  .brand { margin:0; font-size:clamp(1.7rem, 4vw, 2.8rem); letter-spacing:-1.4px; line-height:1.05; color:var(--navy); }
+  .brand span { color:var(--red); }
+  .tagline { color:var(--muted); margin:8px 0 0; font-size:.95rem; }
+  .edition { text-align:right; color:var(--muted); font-size:.82rem; }
+  nav { background:var(--navy); }
+  .nav-inner { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:0 12px; }
+  nav button { appearance:none; border:0; border-bottom:3px solid transparent; color:white; background:transparent; padding:15px 18px 12px; font-size:.95rem; font-weight:700; cursor:pointer; }
+  nav button:hover, nav button.active { background:#20455f; border-bottom-color:#ffcc65; }
+  main { max-width:1100px; margin:26px auto 50px; padding:0 20px; }
+  .ticker { background:white; border:1px solid #dce3e8; display:flex; gap:12px; align-items:center; padding:10px 14px; margin-bottom:22px; font-size:.9rem; }
+  .ticker strong { background:var(--red); color:white; padding:4px 8px; text-transform:uppercase; font-size:.72rem; letter-spacing:.5px; }
+  .layout { display:grid; grid-template-columns:minmax(0, 1fr) 290px; gap:26px; align-items:start; }
+  .article, .sidebar-card, .section-panel { background:white; border:1px solid #e0e5e9; box-shadow:0 3px 12px rgba(18,49,74,.045); }
+  .article { padding:clamp(20px, 4vw, 38px); }
+  .kicker { color:var(--red); text-transform:uppercase; font-size:.78rem; font-weight:800; letter-spacing:1px; }
+  h2 { color:var(--navy); font-size:clamp(1.8rem, 3.6vw, 2.65rem); line-height:1.12; letter-spacing:-.8px; margin:12px 0 16px; }
+  .standfirst { color:#4a5964; font-size:1.12rem; line-height:1.55; border-left:4px solid var(--red); padding-left:16px; margin:0 0 20px; }
+  .meta { color:var(--muted); font-size:.82rem; border-bottom:1px solid #e5e9ed; padding-bottom:16px; margin-bottom:22px; }
+  .notice { background:#fff7e5; border:1px solid #ead39c; padding:12px 14px; margin:0 0 22px; color:#624d1e; font-size:.88rem; }
+  .article p { margin:0 0 16px; }
+  .article h3 { color:var(--navy); margin:24px 0 8px; }
+  .sidebar-card { padding:20px; margin-bottom:18px; }
+  .sidebar-card h3 { margin:0 0 12px; color:var(--navy); font-size:1.05rem; border-bottom:2px solid var(--red); padding-bottom:9px; }
+  .side-link { padding:10px 0; border-bottom:1px solid #e8ecef; font-size:.9rem; }
+  .side-link:last-child { border-bottom:0; }
+  .side-link strong { display:block; color:var(--navy); margin-bottom:3px; }
+  .tag { display:inline-block; background:#edf3f6; color:var(--blue); font-size:.72rem; padding:3px 7px; font-weight:700; text-transform:uppercase; }
+  .section-panel { padding:28px; min-height:300px; }
+  .section-panel h2 { font-size:2rem; }
+  .section-panel p { color:#52616c; }
+  footer { background:var(--navy); color:#d8e2e8; padding:25px 20px; font-size:.82rem; }
+  .footer-inner { max-width:1100px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  .small { font-size:.78rem; color:var(--muted); }
+  @media (max-width:760px) {
+    .masthead { align-items:flex-start; flex-direction:column; }
+    .edition { text-align:left; }
+    .layout { grid-template-columns:1fr; }
+    nav button { padding:13px 12px 10px; }
+    .topline { padding:7px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topline">L'actualité locale, décryptée au quotidien · Yvelines (78)</div>
+  <div class="masthead">
+    <div>
+      <h1 class="brand">L'INFO DIRECTE <span>DES YVELINES</span></h1>
+      <p class="tagline">Comprendre le territoire, suivre ce qui change.</p>
+    </div>
+ 
+  </div>
+  <nav aria-label="Navigation principale">
+    <div class="nav-inner">
+      <button class="active" data-section="actu">Actu</button>
+      <button data-section="politique">Politique</button>
+      <button data-section="societe">Société</button>
+      <button data-section="sciences">Sciences</button>
+      <button data-section="sante">Santé</button>
+      <button data-section="apropos">À propos</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="ticker"><strong>À la une</strong><span>Des déchets nucléaires à Tigreville.</span></div>
+
+  <section id="actu" class="section-content">
+    <div class="layout">
+      <article class="article">
+        <div class="kicker">Tigreville · Enquête locale</div>
+        <h2>Tigreville : un projet d’usine d’enfouissement de déchets nucléaires révélé par hasard ?</h2>
+        <p class="standfirst">Un contrat estimé à près de 500 millions d’euros, une entreprise luxembourgeoise et des soupçons d’accord discret : le projet d’une usine prévue pour 2033 suscite de nombreuses interrogations.</p>
+        <div class="meta">Par la rédaction · Lecture : 2 min · Mis à jour à 08:45</div>
+
+        <p>Selon plusieurs informations recueillies par la rédaction, le maire de Tigreville aurait signé une autorisation avec une entreprise luxembourgeoise spécialisée dans l’enfouissement des déchets nucléaires, en vue de l’installation d’une usine à l’horizon 2033.</p>
+        <p>L’origine de ce projet remonterait à une rencontre entre le maire et Mathias Bolivaret, ancien porte-parole de la Chambre de commerce, de l’industrie et de l’acier du Pays Tigrevillois et proche de l’élu. Cette rencontre aurait facilité les échanges avec l’entreprise étrangère.</p>
+        <p>Une secrétaire de mairie aurait découvert l’existence d’un contrat en cherchant une agrafeuse dans le bureau du maire. Le document évoquerait un accord financier avoisinant les <strong>500 millions d’euros</strong> entre la municipalité et l’entreprise.</p>
+        <p>Le site envisagé se situerait à proximité de la route nationale entre Tigreville et Goretus. Les riverains de la zone ouest pourraient être les premiers concernés par les conséquences de cette implantation.</p>
+        <h3>Des questions encore sans réponse</h3>
+        <p>Le projet aurait-il été négocié à l’abri des regards ? Plusieurs questions demeurent : quelle autorisation aurait été signée, quelles garanties seraient prévues pour les habitants et les élus comme les riverains auraient-ils été informés ? Autant de points qui nécessiteraient, dans une véritable enquête, des documents authentifiés et des réponses officielles.</p>
+        
+      </article>
+
+      <aside>
+        <div class="sidebar-card">
+          <h3>Les sujets du moment</h3>
+          <div class="side-link"><strong>Tigreville : le débat local</strong><span class="small">Politique · Clash</span></div>
+          <div class="side-link"><strong>Industrie et environnement</strong><span class="small">Sciences · Du nouveau</span></div>
+          <div class="side-link"><strong>Comment vérifier une information ?</strong><span class="small">Société · Guide pratique</span></div>
+        </div>
+        <div class="sidebar-card">
+          <h3>Pensées</h3>
+          <p class="small">Il suffira d'une étincelle, d'un geste, d'un contact" JP Smet</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="politique" class="section-content" hidden>
+    <div class="section-panel">
+      <div class="kicker">Rubrique</div><h2>Politique</h2>
+      <p>Les décisions municipales, les débats publics et la vie des collectivités des Yvelines.</p>
+      <div class="side-link"><span class="tag">Tigreville · Conseil municipal</span><h3>Le conseil municipal aurait l’obligation de rouler en voiture électrique</h3><p>Une nouvelle règle présentée comme applicable aux élus locaux suscite des interrogations sur les déplacements et le budget de la commune. Quels textes encadreraient réellement cette obligation ?</p><span class="small">Par la rédaction · 4 min</span></div>
+      <div class="side-link"><span class="tag">Traditions locales</span><h3>Le maire souhaiterait supprimer la foire</h3><p>Selon plusieurs témoignages, l’avenir de ce rendez-vous traditionnel serait discuté à la mairie. Commerçants et associations attendraient des précisions sur les raisons de cette éventuelle décision.</p><span class="small">Par la rédaction · 3 min</span></div>
+      <div class="side-link"><span class="tag">Conseil municipal · Tensions</span><h3>Opposition : un élu écarté d’une séance après avoir dénoncé des irrégularités financières</h3><p>Un membre de l’opposition affirme avoir été empêché de participer à une séance après avoir posé des questions sur la gestion financière d’un ancien élu de la majorité. La mairie n’a pas encore apporté de réponse publique dans cet article.</p><span class="small">Par la rédaction · 5 min</span></div>
+    </div>
+  </section>
+  <section id="societe" class="section-content" hidden>
+    <div class="section-panel">
+      <div class="kicker">Rubrique</div><h2>Société</h2>
+      <p>Initiatives locales, vie quotidienne, éducation et enjeux de société.</p>
+      
+    </div>
+  </section>
+  <section id="sciences" class="section-content" hidden>
+    <div class="section-panel">
+      <div class="kicker">Rubrique</div><h2>Sciences</h2>
+      <p>Environnement, recherche, technologies et explications scientifiques accessibles.</p>
+      
+    </div>
+  </section>
+  <section id="sante" class="section-content" hidden>
+    <div class="section-panel">
+      <div class="kicker">Rubrique</div><h2>Santé</h2>
+      <p>Prévention, services de proximité et actualités de santé publique.</p>
+      <div class="side-link"><span class="tag">Tartognère sur doubs · Services hospitaliers</span><h3>L’hôpital de Tartognère sur doubs en grande difficulté financière : les week-ends des semaines paires et les jours fériés seraient concernés par une fermeture</h3><p>Des inquiétudes circulent sur la situation budgétaire de l’établissement et l’organisation future de certains services. Avant toute conclusion, les horaires, les services concernés et les éventuelles décisions doivent être confirmés auprès de l’hôpital et des autorités sanitaires.</p><span class="small">Par la rédaction · 4 min</span></div>
+    </div>
+  </section>
+  <section id="apropos" class="section-content" hidden>
+    <div class="section-panel">
+      <div class="kicker">Le média</div><h2>À propos de L’Info directe des Yvelines</h2>
+      <p>L’Info directe des Yvelines propose des informations locales, des enquêtes et des articles consacrés à la vie du territoire.</p>
+      <h3>Mentions de publication</h3>
+      <p><strong>Raison sociale :</strong> L’Info directe des Yvelines</p>
+      <p><strong>Adresse :</strong> 105 avenue François-Mitterrand, 78910 Orgerus</p>
+      <p><strong>Président-directeur général :</strong> Mathias Bolivaret</p>
+      <p><strong>Contact rédaction :</strong> redaction@info-directe-yvelines.example</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span><strong>L'Info directe des Yvelines</strong> · Maquette fictive</span>
+    <span>Actu · Politique · Société · Sciences · Santé · À propos</span>
+  </div>
+</footer>
+<script>
+  const buttons = document.querySelectorAll('nav button[data-section]');
+  const sections = document.querySelectorAll('.section-content');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.section;
+      sections.forEach(section => { section.hidden = section.id !== target; });
+      buttons.forEach(item => {
+        const selected = item === button;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-current', selected ? 'page' : 'false');
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
